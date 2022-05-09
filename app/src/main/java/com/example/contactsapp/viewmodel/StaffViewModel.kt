@@ -39,10 +39,8 @@ class StaffViewModel(private val repository: StaffRepository): ViewModel() {
 
           val result =  repository.getStaffFromDB()
 
-              //  if(result.isEmpty()) {
                     _staffList.postValue(result)
                     _loadingState.postValue(LoadingState.LOADED)
-              //  }
 
         }
     }

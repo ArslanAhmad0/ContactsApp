@@ -38,12 +38,10 @@ class FirstFragment : Fragment() ,OnClickCallBack {
 
                 binding.swipeRefreshStaffLayout.setOnRefreshListener {
                     if (checkForInternet(context)) {
-                       Toast.makeText(context, "Connected", Toast.LENGTH_SHORT).show()
                         viewModel.fetchStaff()
 
                     }
                     else {
-                        Toast.makeText(context, "Internet Disconnected", Toast.LENGTH_SHORT).show()
                         binding.rvStaffList.visibility =View.GONE
                         binding.errorTv.visibility = View.VISIBLE
 
